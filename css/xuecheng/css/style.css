@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 12px;
+  color: #666;
 }
 
 a {
@@ -14,11 +15,15 @@ ul {
 }
 
 body {
-  color: #666;
+  background: #f3f5f7;
 }
 
 img {
   vertical-align: middle;
+}
+
+h4 {
+  display: block;
 }
 
 header {
@@ -98,7 +103,12 @@ nav li a:hover {
   line-height: 40px;
 }
 
+.psersonal span + span img:hover {
+  transform: rotate(-360deg);
+}
+
 .psersonal img {
+  transition: all 0.6s;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -198,6 +208,10 @@ aside ul li {
   padding-top: 6px;
 }
 
+.timebook li:nth-child(3) {
+  border: 0;
+}
+
 .timebook h5 {
   font-size: 16px;
   font-weight: normal;
@@ -223,23 +237,161 @@ aside ul li {
   border: 1px solid rgb(106, 251, 255);
   text-align: center;
   font-size: 16px;
+  line-height: 40px;
+}
+
+.timebook a:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(106, 251, 255);
 }
 
 .rec-l {
   position: relative;
-  margin: 20px auto;
-  text-align: center;
+  margin-top: 10px;
+  padding-left: 30px;
   height: 60px;
   line-height: 60px;
   border: 1px solid #ccc;
+  box-shadow: 0 1px 14px rgba(0, 0, 0, 0.4);
 }
 
-.rec-l strong,
-a {
+.rec-l a {
+  font-size: 14px;
   padding: 10px;
+}
+
+.rec-l strong {
+  color: rgb(15, 176, 255);
+  font-size: 14px;
+  padding: 10px;
+}
+
+.rec-l a:visited {
+  color: rgb(0, 0, 0);
+}
+
+.rec-l a:hover {
+  color: rgb(255, 63, 3);
 }
 
 .rec-l em {
   position: absolute;
   right: 20px;
+  font-style: normal;
+}
+
+.products {
+  margin-top: 30px;
+}
+
+.pro-hd {
+  height: 40px;
+  position: relative;
+}
+
+.pro-hd h4 {
+  font-style: normal;
+  font-size: 18px;
+}
+
+.pro-hd a {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.products li {
+  width: 228px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.4s;
+}
+
+.products li:nth-child(5n) {
+  margin-right: 0;
+}
+
+.products li:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+}
+.products img {
+  transition: all 0.4s;
+}
+
+.products img:hover {
+  transform: translateX(-5px);
+}
+
+.pro-title {
+  width: 185px;
+  margin: 20px auto;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+
+.products p {
+  width: 185px;
+  margin: 20px auto;
+  color: #999;
+}
+
+.products span {
+  color: rgb(255, 139, 45);
+}
+
+footer {
+  height: 420px;
+  padding-top: 20px;
+  background: #fff;
+}
+
+.footer-l {
+  float: left;
+  padding-left: 15px;
+}
+
+.footer-l p {
+  padding: 20px 0;
+}
+
+.footer-l a {
+  width: 120px;
+  height: 35px;
+  border: 1px solid rgb(66, 158, 244);
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+}
+
+.footer-r {
+  float: right;
+}
+
+.footer-r dl {
+  float: left;
+  margin-left: 130px;
+}
+
+.footer-r dl dt {
+  height: 30px;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-r dl dd {
+  height: 20px;
 }
