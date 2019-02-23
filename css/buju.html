@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    header,
+    nav,
+    footer {
+      width: 1260px;
+      border: 1px dashed #ccc;
+      margin: 5px auto;
+    }
+
+    header {
+      height: 100px;
+    }
+
+    nav {
+      width: 960px;
+      height: 150px;
+    }
+
+    main {
+      width: 960px;
+      height: 400px;
+      margin: 5px auto;
+    }
+
+    main .title {
+      float: left;
+      border: 1px dashed #ccc;
+      width: 230px;
+      height: 130px;
+      margin-bottom: 5px;
+    }
+
+    main .title + .title {
+      margin-left: 10px;
+    }
+
+    main .container {
+      float: left;
+      border: 1px dashed #ccc;
+      width: 230px;
+      height: 250px;
+    }
+
+    main .container + .container {
+      margin-left: 10px;
+    }
+
+    footer {
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+  <nav></nav>
+  <main>
+    <section>
+      <div class="title"></div>
+      <div class="title"></div>
+      <div class="title"></div>
+      <div class="title"></div>
+    </section>
+    <section>
+      <div class="container"></div>
+      <div class="container"></div>
+      <div class="container"></div>
+      <div class="container"></div>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>

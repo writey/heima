@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        font-size: 14px;
+      }
+      a:hover {
+        color: rgb(117, 236, 129);
+      }
+      /* .jiegou li:first-child {
+        color: rgb(182, 39, 129);
+      }
+      .jiegou li:last-child {
+        color: rgba(184, 107, 194, 0.27);
+      }
+      .jiegou li:nth-child(4) {
+        color: rgba(25, 51, 175, 0.55);
+      } */
+      /* .jiegou li:nth-child(2n) {
+        color: rgb(93, 230, 67);
+      }
+      .jiegou li:nth-child(2n + 1) {
+        color: rgb(205, 85, 173);
+      } */
+      .jiegou li:nth-of-type(2n+1) {
+        color: rgb(205, 85, 173);
+      }
+      :target {
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <div class="content">
+      <aside class="">
+        <ul>
+          <li><a>链接伪类选择器 a:hover</a></li>
+        </ul>
+        <section class="jiegou">
+          <h1>结构伪类选择器</h1>
+          <ul>
+            <li>第1个孩子 first-child</li>
+            <li>第2个孩子 偶数 odd</li>
+            <li>第3个孩子 奇数even</li>
+            <li>第4个孩子</li>
+            <li>第5个孩子</li>
+            <li>第6个孩子</li>
+            <li>第7个孩子 last-child</li>
+          </ul>
+        </section>
+        <section>
+          <h1>目标伪类选择器:target</h1>
+          <p>当前活动的类的选择器</p>
+        </section>
+      </aside>
+    </div>
+    <footer>
+      <address class="">
+
+      </address>
+    </footer>
+  </body>
+</html>

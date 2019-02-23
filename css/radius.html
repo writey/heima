@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    div {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+      display: inline-block;
+    }
+
+    div:first-child {
+      border-radius: 10px;
+    }
+
+    div:nth-child(2) {
+      border-radius: 50%;
+    }
+
+    div:nth-child(3) {
+      border-radius: 10px 60% 10px 10px;
+    }
+
+    div:nth-child(5) {
+      overflow: hidden;
+      border-radius: 30px;
+      border: 0;
+      background-color: rgba(100, 150, 186, 0.75);
+    }
+
+    div:nth-child(5) > div {
+      width: 80%;
+      height: 80%;
+      border: 0;
+      margin-top: 20%;
+      border-radius: 0 50% 0 30px;
+      background-color: rgba(105, 172, 221, 0.75);
+    }
+
+    div:nth-child(5) > div > div {
+      width: 80%;
+      height: 80%;
+      border: 0;
+      margin-top: 20%;
+      border-radius: 0 50% 0 30px;
+      background-color: rgba(43, 139, 210, 0.75);
+    }
+
+
+  </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+    <div><div>
+      <div></div>
+    </div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

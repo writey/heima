@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div[class^=font] {
+      color: rgb(5, 155, 195);
+    }
+
+    div[class$=footer] {
+      color: rgb(1, 187, 115);
+    }
+
+    div[class*=contain] {
+      color: rgb(235, 77, 149);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="font12">font12 ^代表匹配开头</div>
+  <div class="font12">font12 class^=font </div>
+  <div class="font14">font14 匹配开头为font的类</div>
+  <div class="123footer">123footer $代表匹配结尾</div>
+  <div class="adafooter">adafooter class$=footer</div>
+  <div class="1231footer">1231footer 代表匹配结尾为footer的元素</div>
+  <div class="asdfadscontainasdfs">asdfadscontainasdfs *代表匹配包含</div>
+  <div class="containfabaer">containfabaer class*=contain</div>
+  <div class="asdfasafcontain">asdfasafcontain 代表匹配包含 contain的元素</div>
+</body>
+</html>

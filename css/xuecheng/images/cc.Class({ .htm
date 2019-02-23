@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://fanyi.youdao.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./cc.Class({ _files/request.s"></script><script async="" src="./cc.Class({ _files/request(1).s"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>在线翻译_有道</title>
+    <meta name="keywords" content="在线翻译">
+    <meta name="description" content="有道翻译提供即时免费的中文、英语、日语、韩语、法语、德语、俄语、西班牙语、葡萄牙语、越南语、印尼语全文翻译、网页翻译、文档翻译服务。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.4, minimum-scale=1.0, maximum-scale=2.0">
+    <link rel="canonical" href="http://fanyi.youdao.com/">
+    <link href="http://shared.ydstatic.com/plugins/search-provider.fanyi.xml" title="有道翻译" type="application/opensearchdescription+xml" rel="search">
+    <link rel="shortcut icon" href="./cc.Class({ _files/favicon.ico" type="image/x-icon">
+           <link href="./cc.Class({ _files/fanyi-newweb.min.css" rel="stylesheet" type="text/css">
+    
+    <!--[if lte IE 8]>
+        <script>
+            window.onload = function(){
+                 document.body.className = document.body.className + " less-ie8";
+            };
+        </script>
+    <![endif]-->
+<style type="text/css">@font-face {
+  font-family: 'rbicon';
+  src: url(chrome-extension://dipiagiiohfljcicegpgffpbnjmgjcnf/fonts/rbicon.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+</style></head><body class="fanyi-page">
+    <div class="fanyi__nav">
+        <div class="fanyi__nav__container">
+            
+<ul class="fanyi__nav__list">
+    <li><a class="nav__tongchuan" target="_blank" href="http://tongchuan.youdao.com/?keyfrom=fanyi_web_tab">同传<span class="tongchuan_new">new</span></a></li>
+    <li><a target="_blank" href="http://dict.youdao.com/appapi/redirect?redirectUrl=http%3A%2F%2Fyou.163.com%2Fitem%2Fdetail%3Fid%3D3394027%26from%3Dweb_hz_neibu_fyw_16&amp;keyfrom=fyw_youdaofanyi&amp;vendor=top">翻译机</a></li>
+    <li class="nav__rengong">
+        <a target="_blank" href="http://f.youdao.com/?vendor=fanyi-new-nav">人工翻译</a>
+        <div class="rengong__guide rengong__guide--nobtn" style="display: none;">
+            <a target="_blank" class="rengong__guide--con" href="http://f.youdao.com/?vendor=new-fanyicover">
+                <span class="tips__pointer tips__pointer--up"></span>
+                <div class="rengong__guide--title">网易自营人工翻译服务，专业、精准、地道！</div>
+                <ul class="rengong__guide--list">
+                    <li class="rengong__guide--sub">快速翻译</li>
+                    <li>日常用语</li>
+                    <li class="right">工作沟通</li>
+                    <li>地址信息</li>
+                    <li class="right">商贸交流</li>
+                    <li>邮件往来</li>
+                    <li class="right">文章节选</li>
+                </ul>
+                <div class="rengong__guide--line"></div>
+                <ul class="rengong__guide--list rengong__guide--list--right">
+                    <li class="rengong__guide--sub">文档翻译</li>
+                    <li>专业论文</li>
+                    <li class="right">产品介绍</li>
+                    <li>合同标书</li>
+                    <li class="right">简历证件</li>
+                    <li>留学移民</li>
+                    <li class="right">创意翻译</li>
+                </ul>
+            </a>
+            <a class="i-know" href="javascript:;">我知道了</a>
+        </div>
+    </li>
+    <li><a target="_blank" href="http://ai.youdao.com/?keyfrom=fanyi-new-nav">翻译API</a></li>
+    <li><a target="_blank" href="http://fanyiguan.youdao.com/?vendor=fanyi-new-nav">翻译APP</a></li>
+            <li class="last">
+             <a class="login-link" href="javascript:;">登录</a>
+        </li>
+    </ul>
+            <a href="http://fanyi.youdao.com/?keyfrom=fanyi-new.logo" class="fanyi__nav__logo"></a>
+        </div>
+    </div>
+    <div class="fanyi" style="min-height: 708px;">
+        <div class="fanyi__operations">
+            <div class="fanyi__operations--right">
+                <span class="fanyi__operations--underline">
+                    <label for="underlineWord">划词</label>
+                </span>
+            </div>
+            <div class="fanyi__operations--left">
+                <div id="langSelect" class="lang-select item-select">
+                    <span class="select-text">检测到：英语&nbsp; » &nbsp;中文</span>
+                    <ul id="languageSelect" class="select clear">
+                       <li class="default" data-value="AUTO"><a href="javascript:;">自动检测语言</a></li>
+                       <li data-value="zh-CHS2en"><a href="javascript:;">中文&nbsp; » &nbsp;英语</a></li>
+                       <li data-value="en2zh-CHS" class="selected"><a href="javascript:;">英语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2ja"><a href="javascript:;">中文&nbsp; » &nbsp;日语</a></li>
+                       <li data-value="ja2zh-CHS"><a href="javascript:;">日语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2ko"><a href="javascript:;">中文&nbsp; » &nbsp;韩语</a></li>
+                       <li data-value="ko2zh-CHS"><a href="javascript:;">韩语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2fr"><a href="javascript:;">中文&nbsp; » &nbsp;法语</a></li>
+                       <li data-value="fr2zh-CHS"><a href="javascript:;">法语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2de"><a href="javascript:;">中文&nbsp; » &nbsp;德语</a></li>
+                       <li data-value="de2zh-CHS"><a href="javascript:;">德语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2ru"><a href="javascript:;">中文&nbsp; » &nbsp;俄语</a></li>
+                       <li data-value="ru2zh-CHS"><a href="javascript:;">俄语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2es"><a href="javascript:;">中文&nbsp; » &nbsp;西班牙语</a></li>
+                       <li data-value="es2zh-CHS"><a href="javascript:;">西班牙语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2pt"><a href="javascript:;">中文&nbsp; » &nbsp;葡萄牙语</a></li>
+                       <li data-value="pt2zh-CHS"><a href="javascript:;">葡萄牙语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2vi"><a href="javascript:;">中文&nbsp; » &nbsp;越南语</a></li>
+                       <li data-value="vi2zh-CHS"><a href="javascript:;">越南语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2id"><a href="javascript:;">中文&nbsp; » &nbsp;印尼语</a></li>
+                       <li data-value="id2zh-CHS"><a href="javascript:;">印尼语&nbsp; » &nbsp;中文</a></li>
+                       <li data-value="zh-CHS2ar"><a href="javascript:;">中文&nbsp; » &nbsp;阿拉伯语</a></li>
+                       <li data-value="ar2zh-CHS"><a href="javascript:;">阿拉伯语&nbsp; » &nbsp;中文</a></li>
+                    </ul>
+                    <input class="select-input" id="language" name="language" type="hidden" value="en2zh-CHS">
+                </div>
+                <a class="fanyi__operations--machine" id="transMachine" href="javascript:;">翻译</a>
+                <a class="fanyi__operations--man clog-js" data-clog="AT_BUTTON_CLICK" data-pos="web.i.top" id="transMan" href="javascript:;">人工翻译</a>
+                <div class="tips__container fanyi__operations--man--tips">
+                    <span class="tips__pointer tips__pointer--up"></span>
+                    <p>专业译员随时待命<br>最快1分钟返回精准译文</p>
+                    <p class="man__tips--new">【母语润色服务全新上线】</p>
+                </div>
+            </div>
+            <div class="fanyi-error-message"></div>
+        </div>
+        <div class="fanyi__input">
+            <div class="input__original">
+                <div class="fanyi__input__bg fanyi__input__bg--focus">
+                    <div id="docUploadBg" class="doc__upload--bg hidden">
+                        <span class="doc-type"></span>
+                        <div class="doc-infos">
+                            <p class="doc-name"></p>
+                            <span class="doc-error-msg hidden"></span>
+                            <span class="doc-size-msg hidden"></span>
+                        </div>
+                        <a class="doc-delete" href="javascript:;"></a>
+                    </div>
+                    <div id="docUploadCon" class="doc__upload--con" style="display: none;">
+                        <form id="docUploadForm" action1="http://ns013x.corp.youdao.com:13288/doc/upload" action="http://fanyi.youdao.com/trandoc/doc/upload" method="post" enctype="multipart/form-data">
+                            <span>上传文档</span>
+                            <input name="your_file" type="file" id="docUploadFile" class="doc__upload--file">
+                            <div class="doc__upload--tip" style="display: block;">
+                                <span>全新中英文档互译</span>
+                                <a href="javascript:;" class="doc__upload--close">×</a>
+                            </div>
+                            <div class="file__type--tips tips__container speaker__tips">
+                                <span class="tips__pointer tips__pointer--down"></span>
+                                <span>全新文档翻译，支持docx /pdf 等格式中英互译，快来试用！</span>
+                            </div>
+                        </form>
+                    </div>
+                    <a id="inputDelete" class="input__original_delete" style="display: inline;"></a>
+                    <div id="inputOriginalCopy" class="input__original__area">{ [Error: EACCES: permission denied, access '/usr/local/lib/node_modules']
+npm ERR!   stack:
+npm ERR!    'Error: EACCES: permission denied, access \'/usr/local/lib/node_modules\'',
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path: '/usr/local/lib/node_modules' }
+npm ERR!
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR!
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator (though this is not recommended).
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/xcl/.npm/_logs/2019-02-08T08_26_11_943Z-debug.log</div>
+                    <textarea id="inputOriginal" dir="auto" class="input__original__area input__small__font" placeholder="请输入你要翻译的文字或网址" style="font-size: 14px; line-height: 18px; height: 306px; overflow: hidden;"></textarea>
+                    <div class="input__original__bar" style="visibility: visible;">
+                        <div class="input__original__bar--fonts">
+                            <span class="fonts__over">853</span>/<span class="fonts__limited">5000</span>
+                        </div>
+                        <a href="javascript:;" id="originalSpeaker" class="speaker">
+                            <div class="tips__container speaker__tips">
+                                <span class="tips__pointer tips__pointer--down"></span>
+                                <span class="tips__text--short">朗读</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="fanyi__popularize">
+                    <a href="javascript:;" target="_blank" class="clog-js" data-clog="AD_TEXT_CLICK"></a>
+                </div>
+            </div>
+            <div class="input__target">
+                <div class="fanyi__input__bg">
+                    <div id="docLangTip" class="doc-lang-tip">选择翻译语言，然后点击翻译按钮，即可翻译文档</div>
+                    <div class="input__target__error" id="inputTargetError" style="display: none;"></div>
+                    <div id="transTarget" dir="auto" class="input__target__text input__target__text--small" style="height: 306px;"><p data-section="0"><span data-section="0" data-sentence="0">{[错误:EACCES:权限被拒绝，访问'/usr/local/lib/node_modules']</span></p><p data-section="1"><span data-section="1" data-sentence="0">npm犯错!</span><span data-section="1" data-sentence="1">栈:</span></p><p data-section="2"><span data-section="2" data-sentence="0">npm犯错!</span><span data-section="2" data-sentence="1">'错误:EACCES:权限被拒绝，访问\'/usr/local/lib/node_modules\ "，</span></p><p data-section="3"><span data-section="3" data-sentence="0">npm犯错!</span><span data-section="3" data-sentence="1">errno:-13,</span></p><p data-section="4"><span data-section="4" data-sentence="0">npm犯错!</span><span data-section="4" data-sentence="1">代码:“EACCES”,</span></p><p data-section="5"><span data-section="5" data-sentence="0">npm犯错!</span><span data-section="5" data-sentence="1">系统调用:“访问”,</span></p><p data-section="6"><span data-section="6" data-sentence="0">npm犯错!</span><span data-section="6" data-sentence="1" class="">路径:“/ usr /地方/ lib / node_modules”}</span></p><p data-section="7"><span data-section="7" data-sentence="0">npm犯错!</span></p><p data-section="8"><span data-section="8" data-sentence="0">npm犯错!</span><span data-section="8" data-sentence="1" class="">操作被您的操作系统拒绝。</span></p><p data-section="9"><span data-section="9" data-sentence="0">npm犯错!</span><span data-section="9" data-sentence="1" class="">很可能您没有权限以当前用户的身份访问该文件</span></p><p data-section="10"><span data-section="10" data-sentence="0">npm犯错!</span></p><p data-section="11"><span data-section="11" data-sentence="0">npm犯错!</span><span data-section="11" data-sentence="1" class="">如果您认为这可能是权限问题，请仔细检查</span></p><p data-section="12"><span data-section="12" data-sentence="0">npm犯错!</span><span data-section="12" data-sentence="1">文件及其包含的目录的权限，或尝试运行</span></p><p data-section="13"><span data-section="13" data-sentence="0">npm犯错!</span><span data-section="13" data-sentence="1">再次以root/Administrator的身份发出该命令(尽管不建议这样做)。</span></p><p data-section="14"><span data-section="14" data-sentence="0"></span></p><p data-section="15"><span data-section="15" data-sentence="0">npm犯错!</span><span data-section="15" data-sentence="1">完整的运行日志可以在:</span></p><p data-section="16"><span data-section="16" data-sentence="0">npm犯错!</span><span data-section="16" data-sentence="1">/用户/ xcl / .npm / _logs / 2019 - 02年- 08 - t08_26_11_943z debug.log</span></p></div>
+                    <textarea id="transTargetArea" class="input__target__text"></textarea>
+                    <div class="input__target__bar" style="visibility: visible;">
+                        <a class="target__bar__update" id="updateResult">修改翻译结果</a>
+                        <a href="javascript:;" id="targetSpeaker" class="speaker target__bar__parts" style="display: none;">
+                            <div class="tips__container speaker__tips">
+                                <span class="tips__pointer tips__pointer--down"></span>
+                                <span class="tips__text--short">朗读</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" id="targetCopy" class="copy target__bar__parts">
+                            <div class="tips__container speaker__tips">
+                                <span class="tips__pointer tips__pointer--down"></span>
+                                <span class="tips__text--short">复制</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" id="targetStar" class="star target__bar__parts">
+                            <div class="tips__container speaker__tips" id="targetStarTip">
+                                <span class="tips__pointer tips__pointer--down"></span>
+                                <div class="tips__text--short">翻译结果打分</div>
+                                <div class="star-con">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="input__update__suggest">您提供的翻译将用于改善翻译质量，感谢您的建议！</div>
+                    <div class="input__target__dict" style="display: none;">
+                        <span class="resource">来自有道词典结果</span>
+                        <div class="dict__word">
+                            <span class="dict__word--letters">美丽</span>
+                            <span class="dict__word--phonetic">[měi lì]</span>
+                        </div>
+                        <div class="dict__relative">
+                            <a>comeliness</a>
+                            <a>fairness</a>
+                            <a>goodliness</a>
+                            <a>loveliness</a>
+                        </div>
+                        <a class="dict__more clog-js" data-clog="RESULT_DICT_ALL_CLICK" href="javascript:;" target="_blank">查看完整结果&gt;&gt;</a>
+                    </div>
+                </div>
+                <div class="fanyi__update__tip" style="top: 144px; left: 234.109px; display: none;"><span class="pointer"></span>点击可查看其他翻译结果，或修改结果</div>
+                <div class="fanyi__suggest__container" id="fanyiSuggest" style="display: none;">
+                    <div class="suggest__title">
+                        <div class="suggest__title--text">以下为该句多个翻译结果：</div>
+                        <a class="suggest__title--close" href="javascript:;"></a>
+                    </div>
+                    <ul>
+                                                                                                                                            </ul>
+                    <div class="suggest__update__con">
+                        <a href="javascript:;" class="suggest__update__btn">改进此翻译</a>
+                    </div>
+                </div>
+                <div class="input__target__update">
+                    <a class="update__sure update-disable" href="javascript:;">确认修改</a>
+                    <a class="update__cancel" href="javascript:;">取消</a>
+                </div>
+                <div class="download__area">
+                    <a target="_blank" href="http://f.youdao.com/?vendor=fanyibanner">
+                        <div class="fanyi__banner--title">试试有道人工翻译？</div>
+                        <div class="fanyi__banner--desc">精选同行业资深译员，专家审校润色，让你尊享快捷又准确的人工翻译！</div>
+                        <span class="fanyi__banner--btn">立即体验</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="inside__products">
+            <div class="inside__products__item inside__products__item--left">
+                <a target="_blank" href="http://f.youdao.com/?vendor=fanyi-new-bottom">
+                    <div class="products__item--cell rengong">
+                        <h4>有道人工翻译／母语润色</h4>
+                        <p class="products__item__desc">全球最优秀的译员时刻待命<br>专业、精准、地道！</p>
+                        <span class="rengong__intro">了解更多&gt;</span>
+                    </div>
+                </a>
+            </div>
+            <div class="inside__products__item">
+                             <a target="_blank" href="http://tongchuan.youdao.com/?keyfrom=fanyi_web_banner">
+                                                                                                  <div class=" products__item--half--cell products__tongchuan ">
+                          <h4>有道同传</h4>
+                          <p class="products__item__desc">商务会议同传服务提供商<br>专业、精准、可靠</p>
+                      </div>
+
+                </a>
+                <a target="_blank" href="http://fanyiguan.youdao.com/?vendor=fanyi-new-bottom">
+                    <div class="products__item--half--cell products__fanyiguan">
+                        <h4>有道翻译官 APP</h4>
+                        <p class="products__item__desc">支持语音翻译和拍照翻译<br>107种语言的随身翻译</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+                                            </div>
+    <form id="mapForm" target="_blank" method="POST" action="http://f.youdao.com/?path=fanyi&amp;vendor=new-fanyiinput">
+        <input id="mapInput" type="hidden" name="text" value="">
+    </form>
+    <div class="fanyi__footer" style="display: block;">
+      <a target="_blank" href="http://www.youdao.com/?keyfrom=fanyi-new.copyright">有道首页</a><span class="c_fnl">|</span><a target="_blank" href="http://dsp.youdao.com/?keyfrom=fanyi-new.copyright">有道智选</a><span class="c_fnl">|</span><a target="_blank" href="https://ke.youdao.com/?keyfrom=fanyi-new.copyright">有道精品课</a><span class="c_fnl">|</span><a target="_blank" href="http://www.youdao.com/about/index.html">关于有道</a><span class="c_fnl">|</span><a target="_blank" href="http://i.youdao.com/">官方博客</a>
+      <p class="c_fcopyright">© 2019 网易公司 京ICP证080268号</p>
+    </div>
+    <div class="side__nav">
+        <div class="rengong-weixin">
+            <span class="tips__pointer tips__pointer--right"></span>
+            扫描二维码<br>
+            关注有道人工翻译
+        </div>
+        <a href="http://f.youdao.com/?vendor=new-fanyientrance" target="_blank" class="side__nav__flow">人工<br>翻译</a>
+        <a target="_blank" href="http://survey2.163.com/html/fanyis201103a2/paper.html?id=277685277@10.169.0.83@0" class="side__nav__feedback">满意度<br>反馈</a>
+        <a href="javascript:;" class="side__nav__backtop"></a>
+    </div>
+    <div id="YOUDAO_SELECTOR_WRAPPER" bindto="inputOriginal:transTarget" style="display:none; z-index: 101; margin:0; border:0; padding:0; width:320px; height:240px;"><iframe id="YOUDAO_SELECTOR_IFRAME" frameborder="0" src="./cc.Class({ _files/saved_resource.html" style="background-color: white; border: 0px; width: 320px; height: 240px;"></iframe></div>
+    <div class="less-ie8-tip">请在IE8以上版本，或Chrome、火狐、Safari等浏览器中访问该网页。</div>
+    <div class="dict-download-guide">
+        <div class="guide-con">
+            <a href="javascript:;" target="_blank" class="download-guide-link">
+                <img class="download-guide-img" src="./cc.Class({ _files/favicon.ico">
+            </a>
+            <span class="guide-close"></span>
+        </div>
+    </div>
+    <audio id="playVoice" style="position:absolute;top:-999px;left:-999px;width:1px;height:1px;"></audio>
+    <div class="upload__cover">
+        <div class="upload__cover--content">
+            <div class="upload__cover--title"><span class="upload__percent"></span>解析中</div>
+            <div class="upload__filename"></div>
+            <div class="upload__progress--con">
+                <div class="upload__progress"></div>
+            </div>
+            <a class="upload--cancel" href="javascript:;">取消</a>
+        </div>
+    </div>
+    <div id="dialogCover" class="dialog-cover"></div>
+    <div id="loginAlert" class="dialog-alert">
+        <a href="javascript:;" class="dialog-alert--close"></a>
+        <div class="title">如需使用文档翻译功能，请先登录。</div>
+        <div class="content"></div>
+        <div class="btns-con">
+        <a href="javascript:;" class="cancel">取消</a>
+        <a href="javascript:;" class="ok">确定</a></div>
+    </div>
+    <div id="loginWindow" class="dialog-alert">
+        <a href="javascript:;" class="dialog-alert--close"></a>
+        <div class="content"><iframe id="loginFrame" class="boxIframe" width="400px" height="415" frameborder="0" src="./cc.Class({ _files/login.html" scrolling="no"></iframe></div>
+    </div>
+    <!-- START rlog -->
+<script>
+var _rlog = _rlog || [];
+// 指定 product id
+_rlog.push(["_setAccount" , "fanyiweb"]);
+</script>
+<script defer="" src="./cc.Class({ _files/v1.js"></script>
+<!-- END rlog -->
+
+<script type="text/javascript">
+var global = {};
+</script><script type="text/javascript" src="./cc.Class({ _files/index.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./cc.Class({ _files/fanyi.min.js"></script>
+
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="fanyivoice" width="0" height="0" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab"><param name="movie" value="scripts/fanyivoice.swf?onload=swfLoad&amp;time=1549614407849"><param name="quality" value="high"><param name="bgcolor" value="#869ca7"><param name="allowScriptAccess" value="sameDomain"><embed src="scripts/fanyivoice.swf?onload=swfLoad&amp;time=1549614407849" quality="high" bgcolor="#869ca7" width="0" height="0" name="fanyivoice" align="middle" play="true" loop="false" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object><div id="rememberry__extension__root" style="all: unset;"></div></body></html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)http://fanyi.youdao.com/login?method=login#http%3A%2F%2Ffanyi.youdao.com%2Flogin%3Fmethod%3DloginCallback#loginSuccess -->
+<html lang="en" data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width , initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title></title>
+    <style>
+
+        body, h1, h2, h3, p, ul, li, dl, dt, dd {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fff;
+            font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文黑体", STHeiti, sans-serif;
+            font-size: 12px;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        img {
+            border: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        h3 {
+            margin: 20px 0 20px;
+            color: #E81123;
+            font-size: 20px;
+        }
+        input:focus{
+            outline: none;
+        }
+        input::-webkit-input-placeholder {
+            font-size: 14px;
+            font-weight: normal;
+            color: #bdbdbd;
+        }
+
+        input::-moz-placeholder {
+            font-size: 14px;
+            font-weight: normal;
+            color: #bdbdbd;
+        }
+
+        input:-ms-input-placeholder {
+            font-size: 14px;
+            font-weight: normal;
+            color: #bdbdbd;
+        }
+
+        input::-o-input-placeholder {
+            font-size: 14px;
+            font-weight: normal;
+            color: #bdbdbd;
+        }
+
+        .login-title{
+            font-size: 16px;
+            color: #333333;
+            line-height: 16px;
+            font-weight: normal;
+            text-align: left;
+            margin: 0 0 24px 0;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 320px;
+            position: relative;
+            padding: 48px 40px 34px 40px;
+        }
+
+        .container li {
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .container .text {
+            display: block;
+            padding: 6px;
+            width: 306px;
+            height:30px;
+            text-indent: 4px;
+            border: 1px solid #E1E1E1;
+            color: #333;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #login-btn{
+            background: #F44336;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #FFFFFF;
+            display: block;
+            width: 100%;
+            height: 44px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 44px;
+            cursor: pointer;
+            border: none;
+            margin-top: 30px;
+        }
+        #login-btn:focus{
+            outline: none;
+        }
+
+
+        .container .error {
+            border: solid 1px red;
+        }
+
+        .forget {
+            color: #929292;
+            display: block;
+            margin-top: 10px;
+            text-align: right;
+        }
+        .forget:hover{
+            text-decoration: underline;
+        }
+
+        .tips {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 41px;
+            background: #FFFFD9;
+            border: solid 1px #EFE097;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .tips s {
+            position: absolute;
+            top: -16px;
+            left: 5px;
+            border: 8px dashed transparent;
+            border-bottom: 8px solid #EFE097;
+        }
+
+        .tips i {
+            position: absolute;
+            top: -7px;
+            left: -8px;
+            border: 8px dashed transparent;
+            border-bottom: 8px solid #FFFFD9;
+        }
+
+        .msg {
+            display: none;
+            color: #B00;
+            font-weight: 700;
+            position: absolute;
+            top: 204px;
+            right: 40px;
+        }
+
+        .autocomplete {
+            position: absolute;
+            display: none;
+            top: 33px;
+            left: 0;
+            width: 318px;
+            z-index: 2;
+            border: 1px solid #CCC !important;
+            box-shadow: 1px 1px 3px #ededed;
+            -webkit-box-shadow: 1px 1px 3px #ededed;
+            -moz-box-shadow: 1px 1px 3px #ededed;
+            -o-box-shadow: 1px 1px 3px #ededed;
+            background: #fff;
+        }
+
+        .autocomplete a {
+            display: block;
+            text-align: left;
+            padding: 4px 0;
+            text-indent: 4px;
+            font-weight: 700;
+        }
+
+        .autocomplete a.active {
+            background: #FFFFD9;
+        }
+
+        .other {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: solid 1px #eee;
+            text-align: center;
+
+        }
+        .other a{
+            margin:0 10px;
+        }
+
+    </style>
+<style type="text/css">@font-face {
+  font-family: 'rbicon';
+  src: url(chrome-extension://dipiagiiohfljcicegpgffpbnjmgjcnf/fonts/rbicon.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+</style></head>
+<body>
+<div class="container">
+    <h3 class="login-title">使用网易邮箱登录</h3>
+    <form method="post" onsubmit="return false" autocomplete="off">
+        <ul>
+            <li>
+                <input id="username" name="username" type="text" class="text username" placeholder="网易163、126邮箱账号" value="">
+                <div id="username_tips" class="tips"><s><i></i></s>请输入邮箱帐号</div>
+                <div id="username_autocomplete" class="autocomplete">
+                    <a data-domain="@163.com"></a>
+                    <a data-domain="@126.com"></a>
+                    <a data-domain="@yeah.net"></a>
+                    <a data-domain="@popo.163.com"></a>
+                    <a data-domain="@netease.com"></a>
+                    <a data-domain="@vip.163.com"></a>
+                    <a data-domain="@vip.126.com"></a>
+                    <a data-domain="@188.com"></a>
+                </div>
+            </li>
+            <li>
+                <input id="password" name="password" type="password" class="text" placeholder="密码" value="">
+                <div id="password_tips" class="tips"><s><i></i></s>请输入密码</div>
+            </li>
+            <li>
+                <input type="submit" value="登录" class="btn" id="login-btn">
+                <a href="http://reg.163.com/getpasswd/RetakePassword.jsp" target="_blank" class="forget">忘记密码？</a>
+            </li>
+        </ul>
+        <input type="checkbox" id="input-remember" style="display:none" checked="">
+    </form>
+
+    <div id="login-tips" class="msg"></div>
+
+    <div class="other">
+        <a class="weixin" node-type="weixin">
+            <img src="./weixin@2x.png" alt="微信登录" title="微信登录" height="44">
+        </a>
+        <a class="weibo" node-type="weibo">
+            <img src="./weibo@2x.png" alt="新浪微博登录" title="新浪微博登录" height="44">
+        </a>
+        <a class="qq" node-type="qq">
+            <img src="./qq@2x.png" alt="QQ帐号登录" title="QQ帐号登录" height="44">
+        </a>
+    </div>
+</div>
+<script src="./yd.account.login.js"></script>
+<script>
+    yd.account.callbackUrl = location.protocol + "//" + location.host + "/scripts/newweb/oncallback.html";
+</script>
+<script type="text/javascript" src="./jquery-1.8.2.min.js"></script>
+<script>
+/* generated @ 9/12/2017, 5:33:23 PM*/
+!function(e){function t(o){if(n[o])return n[o].exports;var i=n[o]={exports:{},id:o,loaded:!1};return e[o].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}([function(e,t,n){e.exports=n(1)},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{"default":e}}var i=n(2),a=o(i);!function(){var e=location.hash;if(!e||e.length<=1)return void alert("请配置登录成功后的跳转地址");var t=function(e){return/^http[s]?:\/\/[^\/]*\.(163|youdao|ydstatic|126|huihui)\.com/.test(e)?e:location.protocol+"//www.youdao.com/"},n=$("body"),o=$("#username"),i=$("#password"),c=$("#login-tips"),r=/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),s=decodeURIComponent(e.substring(1)),l=function(e){c.html(e).show()},u=function(){c.hide()},d=function(){var e=o.val(),t=i.val();return e?/.+@.+/.test(e)?t?(yd.account.login(e,t,$("#input-remember")[0].checked,function(){location.href=s},function(e){l(e.msg||"登录失败")}),!1):(l("请输入密码"),!1):(l("邮箱帐号错误"),!1):(l("请输入邮箱帐号"),!1)};$(function(){o.keydown(u),r||o.focus(),i.keydown(u),n.delegate("[node-type]","click",function(){yd.account.login($(this).attr("node-type"),s)}),(0,a["default"])({selector:o,mailSelector:n.find(".autocomplete"),onselect:function(){i.focus()}}),$("#login-btn").bind("click",d)})}()},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(){function e(){var e=$(this);return!(!e.width()&&!e.height())&&"none"!==e.css("display")}var t=[],n=function(e){t.push(new o(e))},o=function(t){var n=this,o=-1,i=!1,a=$(t.selector),c=$(t.mailSelector);n.active=function(e){var t=this,o=e.keyCode;clearTimeout(n._timer),n._timer=setTimeout(function(){var e=t.value;if(!e)return void n.close();if(i)switch(o){case 13:return n.select(),void n.close();case 38:return void n.prev();case 40:return void n.next()}var a=e,r=e.indexOf("@");r!=-1&&(a=a.substring(0,r));var s=c.find("[data-domain]").removeClass("active"),l=0;s.each(function(t,n){var o=$(n),i=a+o.data("domain");0==i.indexOf(e)&&e.length!=i.length?(l++,o.html(i).show()):o.hide()}),0==l?n.close():(i=!0,c.show())},120)},n.close=function(){i&&(c.hide(),o=-1,i=!1,t.onclose&&t.onclose())},n.select=function(){var n=c.find("[data-domain]").filter(e).eq(o).html();a.val(n),t.onselect&&t.onselect.call(a[0])},n.next=function(){var t=c.find("[data-domain]").filter(e);o==-1?o=0:(t.eq(o).removeClass("active"),o=++o%t.length),t.eq(o).addClass("active")},n.prev=function(){var t=c.find("[data-domain]").filter(e);o==-1?o=t.length-1:(t.eq(o).removeClass("active"),o=--o%t.length),t.eq(o).addClass("active")},a.keyup(n.active).keydown(function(e){var t=e.keyCode;if(i&&13==t)return e.preventDefault(),o==-1&&(o=0),!1}),c.click(n.select),c.find("[data-domain]").mouseover(function(){var t=$(this),n=c.find("[data-domain]").filter(e);n.eq(o).removeClass("active"),t.addClass("active"),o=n.index(t)})},i=function(){$.each(t,function(e,t){t.close()})};return $(document).click(i),n}();t["default"]=n}]);
+</script>
+
+<div id="rememberry__extension__root" style="all: unset;"></div></body></html>

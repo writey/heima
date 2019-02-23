@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    header {
+      background: rgb(240, 97, 79);
+      width: 300px;  /* overflow: hidden; */
+    }
+
+    .float1 {
+      background: pink;
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
+
+    .clearfix::before,
+    .clearfix::after {
+      content: "";
+      display: table;
+    }
+
+    .clearfix::after {
+      clear: both;
+    }
+
+    .float2 {
+      width: 100px;
+      height: 100px;
+      float: left;
+      background: rgb(107, 218, 240);
+    }
+
+    .container {
+      width: 400px;
+      height: 100px;
+      background: rgb(49, 182, 95);
+    }
+  </style>
+</head>
+<body>
+  <header class="clearfix">
+    <div class="float1"></div>
+    <div class="float2"></div>
+  </header>
+  <div class="container"></div>
+</body>
+</html>

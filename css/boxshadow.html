@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    span {
+      text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    div {
+      margin: 100px auto 0;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+    }
+
+    div:hover {
+      transform: scale(1.1);
+      transition: 200ms;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    div:last-child {
+      background-image: url(./images/shadow.jpg);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      box-shadow: 10px 10px 10px 30px rgba(255, 255, 255, 0.1) inset, 10px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <span>text-shadow: 水平距离 垂直距离 模糊大小 颜色</span>
+  <div>box-shadow: 水平距离 垂直距离 模糊大小 影子大小 颜色 内外模糊（inset）</div>
+  <div></div>
+</body>
+</html>
