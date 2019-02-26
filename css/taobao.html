@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    html,
+    body {
+      height: 100%;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 520px;
+      margin: 200px auto 0;
+      position: relative;
+    }
+
+    .nav {
+      font-size: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 15px;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+    }
+
+    .nav i {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      margin: 3px;
+    }
+
+    .nav i:hover {
+      background: rgb(237, 178, 63);
+      cursor: pointer;
+    }
+
+    .pos-left {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 40px;
+      background: rgba(255, 255, 255, .4);
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .pos-right {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 40px;
+      background: rgba(255, 255, 255, .4);
+      line-height: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="./images/taobao.jpg" alt="">
+    <ul class="nav">
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </ul>
+    <div class="pos-left"><</div>
+    <div class="pos-right">></div>
+</div>
+</body>
+</html>

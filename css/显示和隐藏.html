@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    div {
+      width: 100px;
+      height: 100px;
+      margin: 300px auto;
+      position: relative;
+      background: #ccc;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    div img {
+      display: none;
+      position: absolute;
+      left: 100px;
+      top: 0;
+    }
+
+    div:hover img {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<!--
+display：none;隐藏元素，不是删除 元素存在页面中 不保留位置
+visibility: hidden;  隐藏元素 他和 display none 最大区别是保留元素
+-->
+<div>扫描二维码<img src="./images/qrcode.png" alt=""></div>
+</body>
+</html>

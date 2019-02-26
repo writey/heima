@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: url(./images/bg_wrapper2.jpg) no-repeat center top;
+    }
+
+    header {
+      background: rgba(0, 0, 0, .8);
+      margin-top: 50px;
+    }
+
+    .header {
+      color: rgb(201, 201, 221);
+      height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header p,em {
+      font-size: 10px;
+      color: #858792;
+      font-style: normal;
+      display: block;
+      text-align: center;
+    }
+
+    .header em {
+      line-height: 20px;
+    }
+
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    a {
+      font-size: 18px;
+      color: rgb(201, 201, 221);
+      text-decoration: none;
+    }
+
+    .header > a {
+      display: block;
+      width: 200px;
+      height: 54px;
+      background: url(./images/logorongyao.png) center center;
+      text-indent: -999px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-evenly;
+      width: 800px;
+      font-size: 0;
+      list-style: none;
+    }
+
+    .nav::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .nav li {
+      width: 110px;
+      height: 84px;
+      float: left;
+    }
+    .nav li a {
+      display: block;
+      height: 64px;
+      line-height: 64px;
+      text-align: center;
+    }
+
+    .nav li:hover {
+      background: url(./images/rongyao2.png);
+    }
+
+    .nav li:hover a,
+    .nav li:hover em {
+      color: rgb(243, 194, 88);
+    }
+
+    .bg {
+      width: 44px;
+      height: 44px;
+      background: url(./images/rongyao2.png);
+      background-position: -180px 0;
+    }
+
+    .down {
+      height: 130px;
+      width: 240px;
+      background: url(./images/rongyao2.png);
+      background-position: 0 -220px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <div class="container header">
+    <a href="#">王者荣耀</a>
+    <ul class="nav">
+      <li><a href="#">官网首页<em>HOME</em></a></li>
+      <li><a href="#">官网首页<em>HOME</em></a></li>
+      <li><a href="#">官网首页<em>HOME</em></a></li>
+      <li><a href="#">官网首页<em>HOME</em></a></li>
+      <li><a href="#">官网首页<em>HOME</em></a></li>
+      <li><a href="#">官网首页<em>HOME</em></a></li>
+      <li><a href="#">官网首页<em>HOME</em></a></li>
+    </ul>
+    <div class="login">
+      <a href="#">欢迎登陆</a>
+      <p>登陆后查看游戏成绩</p>
+    </div>
+  </div>
+  </header>
+  <div class="down"></div>
+</body>
+</html>
