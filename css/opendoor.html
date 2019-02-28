@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    section {
+      width: 450px;
+      height: 300px;
+      border: 1px solid #000;
+      margin: 300px auto;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    section img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .door-left,
+    .door-right {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background: rgb(175, 34, 30);
+      transition: all .5s;
+    }
+
+    .door-left {
+      border-right: 1px solid #000;
+      transform-origin: top left;
+    }
+
+    .door-right {
+      right: 0;
+      border-left: 1px solid #000;
+      transform-origin: top right;
+    }
+
+    .door-left::after,
+    .door-right::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid #000;
+    }
+
+    .door-left::after {
+      right: 5px;
+    }
+
+    .door-right::after {
+      left: 5px;
+    }
+
+    section:hover .door-left {
+      transform: rotateY(-110deg);
+    }
+
+    section:hover .door-right {
+      transform: rotateY(110deg);
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <img src="./images/2.jpg" alt="">
+    <div class="door-left"></div>
+    <div class="door-right"></div>
+  </section>
+</body>
+</html>
