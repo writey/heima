@@ -20,11 +20,22 @@
       -webkit-background-size: cover;
       background-size: cover;
       transform-style: preserve-3d;
-      transition: all linear 5s;
+      transition: all linear 9s;
+      animation: xuanzhuan 9s linear infinite;
+    }
+
+    @keyframes xuanzhuan {
+      form {
+        transform: rotateY(0);
+      }
+
+      to {
+        transform: rotateY(360deg);
+      }
     }
 
     section:hover {
-      transform: rotateY(360deg);
+      animation-play-state: paused;
     }
 
     div {
