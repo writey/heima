@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      max-width: 540px;
+      margin: 200px auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      text-shadow: 0 2px 1px rgba(0, 0, 0, .3);
+    }
+
+    .server {
+      height: 273px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    section {
+      flex: 1;
+      display: flex;
+      min-width: 320px;
+    }
+
+    section:nth-child(1) {
+      background: linear-gradient(to right,#fa5956,#fa9b4d);
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    section:nth-child(2) {
+      background: linear-gradient(to right,#4b8fed,#53bced);
+    }
+
+    section:nth-child(3) {
+      background: linear-gradient(to right,#34c2aa,#6cd557);
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    section div {
+      flex: 1;
+    }
+
+    section .item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    section .item a {
+      flex: 1;
+      text-align: center;
+      padding: 11px 0;
+      border: 1px solid #fff;
+    }
+
+    .top-left-radius {
+      border-top-left-radius: 8px;
+    }
+
+    .top-right-radius {
+      border-top-right-radius: 8px;
+    }
+
+    .bottom-right-radius {
+      border-bottom-right-radius: 8px;
+    }
+
+    .bottom-left-radius {
+      border-bottom-left-radius: 8px;
+    }
+
+    a:visited {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="server">
+    <section>
+      <div class="item top-left-radius"><a href="" src="#">定制旅行</a></div>
+      <div class="item"><a href="" src="#">定制旅行</a><a href="" src="#">定制旅行</a></div>
+      <div class="item top-right-radius"><a href="" src="#">定制旅行</a><a href="" src="#">定制旅行</a></div>
+    </section>
+    <section>
+      <div class="item"><a href="" src="#">定制旅行</a></div>
+      <div class="item"><a href="" src="#">定制旅行</a><a href="" src="#">定制旅行</a></div>
+      <div class="item"><a href="" src="#">定制旅行</a><a href="" src="#">定制旅行</a></div>
+    </section>
+    <section>
+      <div class="item bottom-left-radius"><a href="" src="#">定制旅行</a></div>
+      <div class="item"><a href="" src="#">定制旅行</a><a href="" src="#">定制旅行</a></div>
+      <div class="item bottom-right-radius"><a href="" src="#">定制旅行</a><a href="" src="#">定制旅行</a></div>
+    </section>
+  </div>
+</body>
+
+</html>
