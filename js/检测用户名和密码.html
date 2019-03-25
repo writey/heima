@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .bg {
+      background: rgb(43, 198, 124);
+    }
+  </style>
+</head>
+<body>
+  <input type="text" name="" id="name">
+  <input type="password" name="" id="password">
+  <input type="button" value="登陆" id="btnLogin">
+  <script type="text/javascript">
+    var btnLogin = document.getElementById('btnLogin');
+    btnLogin.onclick = function () {
+      var textName = document.querySelector('#name');
+      var textPassword = document.querySelector('#password');
+      if(textName.value.length < 3) {
+        textName.classList.add('bg');
+      }else {
+        textName.classList.remove('bg');
+      }
+      if(textPassword.value.length < 6) {
+        textPassword.classList.add('bg');
+      }else {
+        textPassword.classList.remove('bg');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+  function getCha (start, end) {
+    var interval = end - start;
+    var day, hour, minute, second;
+    interval /= 1000;
+    day = Math.round(interval/ 60/ 60/ 24);
+    hour = Math.round(interval/ 60/ 60% 24);
+    minute = Math.round(interval/ 60% 60);
+    second = Math.round(interval% 60);
+    return {
+      day,
+      hour,
+      minute,
+      second
+    }
+  }
+
+  var d1 = new Date();
+  var d2 = new Date(2019, 2, 8);
+  var o = getCha(d1, d2);
+  console.log(o);
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .gray {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" name="" id="txtSearch" class="gray" value="请输入搜索关键字">
+  <input type="button" value="搜索" id="btnSearch">
+  <script type="text/javascript">
+      const GRAY = 'gray';
+      const SEARCH_SELECTOR = '#txtSearch';
+      const BTN_SELECTOR = 'btnSearch';
+      const txtSearch = document.querySelector(SEARCH_SELECTOR);
+      const btnSearch = document.querySelector(BTN_SELECTOR);
+
+      // 获得焦点事件
+      txtSearch.onfocus = () => {
+        if (txtSearch.value.length !== 0 && txtSearch.value === '请输入搜索关键字') {
+          txtSearch.value = '';
+          txtSearch.classList.remove(GRAY);
+        }
+      }
+
+      // 失去焦点
+      txtSearch.onblur = () => {
+        if (txtSearch.value.length === 0) {
+          txtSearch.value = '请输入搜索关键字';
+          txtSearch.classList.add(GRAY);
+        }
+      }
+  </script>
+</body>
+</html>

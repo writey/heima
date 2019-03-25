@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    table {
+      margin: 300px auto 0;
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+    table tr,th,td {
+      border: 1px solid #ccc;
+      padding: 3px;
+    }
+    input[type='button'] {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <input type="checkbox">
+        </th>
+        <th>商品</th>
+        <th>价钱</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" name="" value=""></td>
+        <td>iphone 8</td>
+        <td>8000</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="" value=""></td>
+        <td>mac book</td>
+        <td>15000</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="" value=""></td>
+        <td>ipad mini</td>
+        <td>2000</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="" value=""></td>
+        <td>ipad pro</td>
+        <td>4000</td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" value='反选' onclick="uncheck()">
+</body>
+<script type="text/javascript">
+  const CHECKALL_SELECTOR = 'thead input';
+  const CHECKARR_SELECTOR = 'tbody input';
+  const checkall = document.querySelector(CHECKALL_SELECTOR);
+  const checkarr = document.querySelectorAll(CHECKARR_SELECTOR);
+
+  // 全选功能
+  function changeCheckState(checkbox) {
+    checkbox.checked = checkall.checked;
+  }
+  checkall.onclick = () => (checkarr.forEach(changeCheckState));
+
+  // checkbox 点击检测功能
+  function checkCheckbox() {
+    var checkall_state = true;
+    checkarr.forEach((target) => {
+      if(!target.checked) {
+        checkall_state = false;
+      }
+    });
+    checkall.checked = checkall_state;
+  }
+
+  function bindcheck() {
+    checkarr.forEach( (target) => {
+      target.onclick = checkCheckbox;
+    });
+  }
+
+  bindcheck();
+
+  // 反选
+  function uncheck() {
+    checkarr.forEach((target) => {
+      target.checked = !target.checked;
+    });
+    checkCheckbox();
+  }
+</script>
+</html>

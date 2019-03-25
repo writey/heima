@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="" id="" value="1">
+  <input type="text" name="" id="" value="2">
+  <input type="text" name="" id="" value="3">
+  <input type="text" name="" id="" value="4">
+  <input type="text" name="" id="" value="5">
+  <input type="text" name="" id="" value="6">
+  <input type="text" name="" id="" value="7">
+  <input type="text" name="" id="" value="8">
+  <input type="text" name="" id="" value="9">
+  <input type="button" value="获取文本框的值">
+  <script type="text/javascript">
+    var inputs = document.querySelectorAll('input[type=text]');
+    var btn = document.querySelector('input[type=button]');
+    btn.onclick = function() {
+      const array = [];
+      for(var i = 0; i < inputs.length; i++) {
+        //a += inputs[i].value + '|';
+        //a.trim('|');
+        array.push(inputs[i].value);
+      }
+      var s = array.join('|');
+      console.log(s);
+    }
+  </script>
+</body>
+</html>
