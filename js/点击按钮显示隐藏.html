@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .box {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(rgb(224, 150, 89), rgb(226, 118, 19));
+    }
+    .hidden {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+<input type="button" value="隐藏">
+</body>
+<script type="text/javascript">
+  const BOX_SELECTOR = '.box';
+  const BTN_SELECTOR = 'input';
+  const HIDDEN = 'hidden';
+  const box = document.querySelector(BOX_SELECTOR);
+  const btn = document.querySelector(BTN_SELECTOR);
+  let isShow = true;
+
+  function switchBox() {
+    if(isShow) {
+      box.classList.add(HIDDEN);
+      btn.value = '显示';
+    } else {
+      box.classList.remove(HIDDEN);
+      btn.value = '隐藏';
+    }
+    isShow = !isShow;
+  }
+
+  btn.onclick = switchBox;
+</script>
+</html>

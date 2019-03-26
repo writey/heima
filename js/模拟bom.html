@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div id="box" class="cls"></div>
+</body>
+<script type="text/javascript">
+  function Node(options) {
+    this.className = options.className || '';
+    this.id = options.id || '';
+    //  节点的名称，如果是元素的节点的话是标签的名称
+    this.nodeName = options.nodeName || '';
+    // 节点的类型，如果是元素节点1 属性节点2 文本节点3  树脂类型
+    this.nodeType = options.nodeType || 1;
+    //  节点的值   如果是元素节点 始终是null
+    this.nodeValue = options.nodeValue || null;
+    // 记录子节点
+    this.children = options.children || [];
+  }
+
+  var html = new Node({
+    nodeName: 'html'
+  });
+
+  var head = new Node({
+    nodeName: 'head'
+  });
+
+  var body = new Node({
+    nodeName: 'body'
+  });
+
+  var div = new Node({
+    nodeName: 'div'
+  });
+
+  var p = new Node({
+    nodeName: 'p'
+  });
+
+  html.children.push(head);
+  html.children.push(body);
+  body.children.push(div);
+  body.children.push(p);
+
+  console.dir(html);
+  console.dir(head);
+</script>
+</html>
