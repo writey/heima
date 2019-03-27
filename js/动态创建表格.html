@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .subjectScore {
+      margin: 200px auto;
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      font-size: 20px;
+    }
+
+    .subjectScore th {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script type="text/javascript">
+  const BOX_SELECTOR = '#box';
+  const box = document.querySelector(BOX_SELECTOR);
+  const heads = ['姓名', '科目', '分数', '操作'];
+  const bodys = [
+    {name: '张三', subject: '语文', score: '80', option: '删除'},
+    {name: '李四', subject: '语文', score: '80', option: '删除'},
+    {name: '王五', subject: '语文', score: '80', option: '删除'},
+    {name: '赵六', subject: '语文', score: '80', option: '删除'}
+  ];
+
+  function createTable() {
+    let table = document.createElement('table');
+    table.appendChild(createThead(heads));
+    table.appendChild(createTbody(bodys));
+    table.classList.add('subjectScore');
+    return table;
+  }
+
+  function createThead(datas) {
+    let thead = document.createElement('thead');
+    let tr = createTrByArr(datas);
+    thead.appendChild(tr);
+    return thead;
+  }
+
+  function createTbody(datas) {
+    let tbody = document.createElement('tbody');
+    datas.forEach((data) => {
+      let tr = createTrByObj(data);
+      tbody.appendChild(tr);
+    });
+    return tbody;
+  }
+
+  function createTrByArr(arr) {
+    let tr = document.createElement('tr');
+    arr.forEach((data) => {
+      let th = document.createElement('th');
+      th.innerText = data;
+      tr.appendChild(th);
+    });
+    return tr;
+  }
+
+  function createTrByObj(obj) {
+    let tr = document.createElement('tr');
+    tr.appendChild(createTh(obj.name));
+    tr.appendChild(createTh(obj.subject));
+    tr.appendChild(createTh(obj.score));
+    // tr.appendChild(createTh(obj.option));
+    let th = document.createElement('th');
+    let a = document.createElement('a');
+    a.href = '#';
+    a.innerText = obj.option;
+    a.onclick = deleteTr;
+    th.appendChild(a);
+    tr.appendChild(th);
+    return tr;
+  }
+
+  function createTh(text) {
+    let th = document.createElement('th');
+    th.innerText = text;
+    return th;
+  }
+
+  function deleteTr() {
+    let tr = this.parentElement.parentElement.remove();
+  }
+
+  box.appendChild(createTable());
+</script>
+</html>

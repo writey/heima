@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .cccbg {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <input type="button" value="clickme">
+</body>
+<script type="text/javascript">
+  const BOX_SELECTOR = '#box';
+  const box = document.querySelector(BOX_SELECTOR);
+  const BTN_SELECTOR = 'input';
+  const btn = document.querySelector(BTN_SELECTOR);
+  const cccbg = 'cccbg';
+  let datas = ['李彦宏', '马云', '马化腾', '丁磊', '刘强东'];
+
+  function liMouseOver() {
+    this.classList.add(cccbg);
+  }
+
+  function liMouseOut() {
+    this.classList.remove(cccbg);
+  }
+
+  function addUlElement() {
+    let ul = document.createElement('ul');
+    box.appendChild(ul);
+    datas.forEach((data) => {
+      let li = document.createElement('li');
+      li.innerText = data;
+      li.onmouseover = liMouseOver;
+      li.onmouseout = liMouseOut;
+      ul.appendChild(li);
+    });
+  }
+
+  btn.onclick = addUlElement;
+</script>
+</html>

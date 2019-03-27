@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    select {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <select id="selectL" multiple='multiple'>
+    <option value="">上古卷轴5</option>
+    <option value="">剑网三</option>
+    <option value="">巫师3</option>
+    <option value="">黑暗之魂3</option>
+    <option value="">暗黑破坏神3</option>
+    <option value="">星际争霸2</option>
+  </select>
+  <input type="button" value="<<" id="leftAllBtn">
+  <input type="button" value="<" id="leftBtn">
+  <input type="button" value=">" id="rightBtn">
+  <input type="button" value=">>" id="rightAllBtn">
+  <select id="selectR" multiple='multiple'>
+  </select>
+</body>
+<script type="text/javascript">
+  const LEFTALLBTN_SELECTOR = '#leftAllBtn';
+  const LEFTBTN_SELECTOR = '#leftBtn';
+  const RIGHTALLBTN_SELECTOR = '#rightAllBtn';
+  const RIGHTBTN_SELECTOR = '#rightBtn';
+  const SECLET_SELECTOR = '#selectL';
+  const SECLER_SELECTOR = '#selectR';
+  const leftAllBtn = document.querySelector(LEFTALLBTN_SELECTOR);
+  const leftBtn = document.querySelector(LEFTBTN_SELECTOR);
+  const rightAllBtn = document.querySelector(RIGHTALLBTN_SELECTOR);
+  const rightBtn = document.querySelector(RIGHTBTN_SELECTOR);
+  const secletL = document.querySelector(SECLET_SELECTOR);
+  const secletR = document.querySelector(SECLER_SELECTOR);
+
+  function moveAllTo(selectA, selectB) {
+    while(selectA.children.length) {
+      selectB.appendChild(selectA[0]);
+    }
+  }
+
+  function moveTo(selectA, selectB) {
+    let i = 0;
+    while(selectA.children.length) {
+      if(selectA[i].selected) {
+        selectB.appendChild(selectA[i]);
+        i--;
+      }
+      i++;
+    }
+  }
+
+  leftAllBtn.onclick = () => moveAllTo(selectR, selectL);
+  rightAllBtn.onclick = () => moveAllTo(selectL, selectR);
+  leftBtn.onclick = () => moveTo(selectR, selectL);
+  rightBtn.onclick = () => moveTo(selectL, selectR);
+</script>
+</html>
