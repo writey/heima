@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">
+    <span>span</span>
+    <p>p标签</p>
+    <!-- 这是注释 -->
+  </div>
+</body>
+<script>
+  const BOX_SELECTOR = '#box';
+  const box = document.querySelector(BOX_SELECTOR);
+  console.dir(box);
+  console.dir(box.parentElement);    // 获取父节点
+  console.log(box.children);         // 获取所有子节点
+  console.log(box.childNodes);       // 获取子元素
+</script>
+</html>

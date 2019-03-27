@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>这是一个区域1</div>
+  <div>这是一个区域2</div>
+  <div id='c3'>这是一个区域3</div>
+  <div>这是一个区域4</div>
+  <div>这是一个区域5</div>
+</body>
+<script type="text/javascript">
+  const C3_SELECTOR = '#c3';
+  const c3 = document.querySelector(C3_SELECTOR);
+
+  console.log(getNextElementSibling(c3));
+  console.log(c3.previousElementSibling);
+
+  function getNextElementSibling(element) {
+    let el = element;
+    while(el = el.nextSibling) {
+      if(el.nodeType === 1) {
+        return el;
+      }
+    }
+    return null;
+  }
+</script>
+</html>

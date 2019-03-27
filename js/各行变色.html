@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .cccbg {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <ul id="pili">
+    <li>素还真</li>
+    <li>秦假仙</li>
+    <li>毓逍遥</li>
+    <li>君奉天</li>
+    <li>地冥</li>
+  </ul>
+</body>
+<script type="text/javascript">
+  const PILI_SELECTOR = '#pili';
+  const CCCBG = 'cccbg';
+  const pili = document.querySelector(PILI_SELECTOR);
+
+  function getPiliChildren() {
+    if(pili.hasChildNodes()) {
+      return pili.children;
+    }
+  }
+
+  function changePiLiBg() {
+    let liArr = getPiliChildren();
+    for (var i = 0; i < liArr.length; i++) {
+       if(i % 2 === 0) {
+         liArr[i].classList.add(CCCBG);
+       }
+    }
+  }
+
+  changePiLiBg();
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .bluebg {
+      background: rgb(49, 170, 201);
+    }
+
+    nav ul {
+      list-style: upper-roman;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    nav ul li {
+      float: left;
+      margin: 0 20px;
+      display: inline-block;
+      width: 50px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
+
+    a {
+      color: rgba(69, 244, 113);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="javascript: void(0);">南京</a></li>
+      <li><a href="javascript: void(0);">北京</a></li>
+      <li><a href="javascript: void(0);">成都</a></li>
+      <li><a href="javascript: void(0);">苏州</a></li>
+      <li><a href="javascript: void(0);">深圳</a></li>
+    </ul>
+  </nav>
+</body>
+<script type="text/javascript">
+  const LINKARR_SELECTOR = 'nav a';
+  const link_arr = document.querySelectorAll(LINKARR_SELECTOR);
+  const bluebg = 'bluebg';
+
+  function clearMenuBg() {
+    link_arr.forEach((target) => {
+      target.parentElement.classList.remove(bluebg);
+    });
+  }
+
+  function linkCLick() {
+    clearMenuBg();
+    this.parentElement.classList.add(bluebg);
+  }
+
+  function bindClickEvent() {
+    link_arr.forEach((target) => {
+      target.onclick = linkCLick;
+    });
+  }
+
+  bindClickEvent();
+</script>
+</html>
