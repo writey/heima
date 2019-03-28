@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    #tip {
+      margin: 400px auto;
+      background: #ccc;
+      color: rgb(242, 80, 10);
+      width: 100px;
+      text-align: center;
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+<input type="button" value="删除">
+<input type="button" id='clear' value="取消">
+<div class="hidden" id="tip">删除成功</div>
+</body>
+<script type="text/javascript">
+  const BTN_SELECTOR = 'input';
+  const TIP_SELECTOR = '#tip';
+  const CLEAR_BTN_SELECTOR = '#clear';
+  const btn = document.querySelector(BTN_SELECTOR);
+  const tip = document.querySelector(TIP_SELECTOR);
+  const clear_btn = document.querySelector(CLEAR_BTN_SELECTOR);
+  let timerId;
+
+  btn.onclick = function () {
+    tip.classList.remove('hidden');
+    timerId = setTimeout(() => {
+      tip.classList.add('hidden');
+    }, 3000);
+  }
+
+  clear_btn.onclick = function () {
+    clearTimeout(timerId);
+  }
+
+</script>
+</html>

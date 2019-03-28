@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="header">距离劳动节，还有</div>
+  <div class="date">
+    <div class="day"></div><span>天</span>
+    <div class="hour"></div><span>时</span>
+    <div class="minutes"></div><span>分</span>
+    <div class="seconds"></div><span>秒</span>
+  </div>
+</body>
+<script type="text/javascript">
+  const laodongDate = (new Date('2019-5-1')).getTime();
+  const day = document.querySelector('.day');
+  const hour = document.querySelector('.hour');
+  const minutes = document.querySelector('.minutes');
+  const seconds = document.querySelector('.seconds');
+
+  function setDom() {
+    let now = (new Date()).getTime();
+    let distance = new Date(laodongDate - now);
+    day.innerText = `${ monthToDay(distance) + distance.getDay()}`;
+    hour.innerText = `${distance.getHours()}`;
+    minutes.innerText = `${distance.getMinutes()}`;
+    seconds.innerText = `${distance.getSeconds()}`;
+  }
+
+  function monthToDay(date) {
+    let day = 0;
+    let count = date.getMonth();
+    while(count) {
+      day += daysInMonth(new Date().getMonth() + count--);
+    }
+    return day;
+  }
+
+  function daysInMonth (month) {
+    return new Date(2019, month, 0).getDate();
+  }
+
+  setDom();
+
+  function setartInterval() {
+    setInterval(() => {
+      setDom();
+    }, 1000);
+  }
+
+  setartInterval();
+  // function starIntervalSeconds() {
+  //   setInterval(() => {
+  //     let second = seconds.innerText;
+  //     if(second === '0') {
+  //       seconds.innerText = 60;
+  //       changeMinutes();
+  //     }
+  //     seconds.innerText -= 1;
+  //   }, 1000);
+  // }
+  //
+  // function changeMinutes() {
+  //   let minute = minutes.innerText;
+  //   if(minute !== '0') {
+  //     minutes.innerText -= 1;
+  //   }else {
+  //     minutes.innerText = 59;
+  //     changeHour();
+  //   }
+  // }
+  //
+  // function changeHour() {
+  //   let hours = hour.innerText;
+  //   if(hours !== '0') {
+  //     hour.innerText -= 1;
+  //   }else {
+  //     hour.innerText = 23;
+  //   }
+  // }
+  //
+  // function changeDay() {
+  //   day.innerText -= 1;
+  // }
+  //
+  // starIntervalSeconds();
+
+  // console.log(distance);
+</script>
+</html>

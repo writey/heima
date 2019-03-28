@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+  function startAssign() {
+    // assign 委派  跳转 与href相同
+    location.assign('https://google.com');
+  }
+
+  function startReplace() {
+    location.replace('https://google.com');
+  }
+
+  // 重新加载  refresh
+
+  function startReload() {
+    // true  强制请求服务器重新加载页面  false 如果有缓存的话 会拿缓存中的数据
+    location.reload(true);
+  }
+</script>
+</html>
