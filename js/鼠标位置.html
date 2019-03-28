@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    body {
+      height: 1000px;
+      margin: 0;
+    }
+
+    #box1 {
+      width: 300px;
+      height: 300px;
+      margin: 100px;
+      margin-top: 500px;
+      background: rgb(50, 219, 31);
+    }
+  </style>
+</head>
+<body>
+<div id="box1"></div>
+</body>
+<script type="text/javascript">
+  const DIV_SELECTOR = '#box1';
+  const box = document.querySelector(DIV_SELECTOR);
+
+  box.onclick = (e) => {
+    e = e || window.event;
+    console.log(`clientX: ${e.clientX}`);
+    console.log(`clientY: ${e.clientY}`);
+    console.log(`pageX: ${e.pageX}`);
+    console.log(`pageY: ${e.pageY}`);
+  }
+</script>
+</html>

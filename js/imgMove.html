@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <img src="./images/1.png" alt="">
+</body>
+<script type="text/javascript">
+  const IMG_SELECTOR = 'img';
+  const img = document.querySelector(IMG_SELECTOR);
+
+  document.onmousemove = (e) => {
+    e = e || window.event;
+    img.style.left = `${e.pageX - 50}px`;
+    img.style.top = `${e.pageY - 50}px`;
+  }
+</script>
+</html>

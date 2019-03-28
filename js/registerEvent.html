@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" value="按钮">
+</body>
+<script type="text/javascript">
+  const BTN_SELECTOR = 'input'
+  const btn = document.querySelector(BTN_SELECTOR);
+
+  addEventListener(btn, 'click', () => alert('click'));
+  addEventListener(btn, 'click', () => alert('click2'));
+
+  function addEventListener(element, eventName, fn) {
+    if(element.addEventListener) {
+      element.addEventListener(eventName, fn);
+    } else if(element.attachEvent) {
+      element.attachEvent(`on${eventName}`, fn);
+    } else {
+      // 相当于 event.oneventName = fn;
+      element[`on${eventName}`] = fn;
+    }
+  }
+</script>
+</html>

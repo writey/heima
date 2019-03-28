@@ -50,13 +50,12 @@
   }
 
   function moveTo(selectA, selectB) {
-    let i = 0;
-    while(selectA.children.length) {
+    let i = selectA.children.length - 1;
+    while(i >= 0) {
       if(selectA[i].selected) {
         selectB.appendChild(selectA[i]);
-        i--;
       }
-      i++;
+      i--;
     }
   }
 
