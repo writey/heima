@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    a {
+      text-decoration: none;
+      margin: 0 auto;
+      display: block;
+      width: 100px;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .bg {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+    }
+
+    .login {
+      width: 300px;
+      height: 500px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      position: absolute;
+      box-shadow: 3px 3px 5px #ccc;
+      box-sizing: border-box;
+      /* margin: 50px calc(50% - 150px); */
+      left: 500px;
+      background: rgb(245, 245, 247);
+    }
+
+    .close {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      box-shadow: 3px 3px 5px #ccc;
+      box-sizing: border-box;
+      left: 270px;
+      top: -10px;
+      text-align: center;
+      line-height: 40px;
+      background: rgb(245, 245, 247);
+    }
+
+  </style>
+</head>
+<body>
+<a href="#">点击登陆</a>
+<div class="bg hidden">
+</div>
+<div class="login hidden">
+  <input type='button' class="close" value="关闭"></div>
+</div>
+</body>
+<script type="text/javascript">
+  const A_SELECTOR = 'a';
+  const BG_SELECTOR = '.bg';
+  const LOGIN_SELECTOR = '.login';
+  const CLOSE_SELECTOR = '.close';
+  const HIDDEN_CLASS = 'hidden';
+
+  function init() {
+    const a = document.querySelector(A_SELECTOR);
+    const close = document.querySelector(CLOSE_SELECTOR);
+    const bg = document.querySelector(BG_SELECTOR);
+    const login = document.querySelector(LOGIN_SELECTOR);
+    a.onclick = (e) => {
+      e.preventDefault();
+      bg.classList.remove(HIDDEN_CLASS);
+      login.classList.remove(HIDDEN_CLASS);
+    }
+    close.onclick = () => {
+      bg.classList.add(HIDDEN_CLASS);
+      login.classList.add(HIDDEN_CLASS);
+    }
+
+    login.onmousedown = (e) => {
+      let x = e.pageX - login.offsetLeft;
+      let y = e.pageY - login.offsetTop;
+      document.onmousemove = (e) => {
+        login.style.left = `${e.pageX - x}px`;
+        login.style.top = `${e.pageY - y}px`;
+      }
+    }
+
+    login.onmouseup = () => {
+      document.onmousemove = null;
+    }
+  };
+  init();
+</script>
+</html>

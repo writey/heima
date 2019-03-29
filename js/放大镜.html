@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    html {
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .small {
+      width: 300px;
+      height: 300px;
+      margin-right: 10px;
+      background-image: url(./images/2.jpg);
+      background-position:center;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+
+    .big {
+      width: 400px;
+      height: 400px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+    .big img {
+      width: 800px;
+      height: 800px;
+      position: relative;
+    }
+
+    .select {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background: rgba(251, 195, 87, 0.6);
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+<div class="small">
+  <div class="select hidden"></div>
+</div>
+<div class="big hidden">
+  <img src="./images/2.jpg"  alt="">
+</div>
+</body>
+<script type="text/javascript">
+  const SMALL_SELECTOR = '.small';
+  const SELECT_SELECTOR = '.select';
+  const BIG_SELECTOR = '.big';
+  const HIDDEN_CLASS = 'hidden';
+  const BIGIMG_SELECTOR = '.big img';
+
+  const small_box = document.querySelector(SMALL_SELECTOR);
+  const select_box = document.querySelector(SELECT_SELECTOR);
+  const big_box = document.querySelector(BIG_SELECTOR);
+  const img = document.querySelector(BIGIMG_SELECTOR);
+  small_box.onmousemove = (e) => {
+    // 显示
+    select_box.classList.remove(HIDDEN_CLASS);
+    big_box.classList.remove(HIDDEN_CLASS);
+
+    // 获取鼠标在select中的位置
+    let maskX = e.pageX - small_box.offsetLeft;
+    let maskY = e.pageY - small_box.offsetTop;
+
+    // 鼠标在select中间
+    maskX = maskX - select_box.offsetWidth / 2;
+    maskY = maskY - select_box.offsetHeight / 2;
+
+    //  固定在父盒子中
+    maskX = maskX < 0 ? 0 : maskX;
+    maskY = maskY < 0 ? 0 : maskY;
+    maskX = maskX > small_box.offsetWidth - select_box.offsetWidth ? small_box.offsetWidth - select_box.offsetWidth : maskX;
+    maskY = maskY > small_box.offsetHeight - select_box.offsetHeight ? small_box.offsetHeight - select_box.offsetHeight : maskY;
+
+    // 赋值
+    select_box.style.left = `${maskX}px`;
+    select_box.style.top = `${maskY}px`;
+
+    // 获取移动比例
+    let maskMax = select_box.offsetWidth - small_box.offsetWidth;
+    let imgMaskMax =  big_box.offsetWidth - img.offsetWidth;
+
+    // 移动图片
+    img.style.left =   `${(-maskX / maskMax * imgMaskMax)}px`;
+    img.style.top = `${(-maskY / maskMax * imgMaskMax)}px`;
+  }
+
+  small_box.onmouseout = () => {
+    select_box.classList.add(HIDDEN_CLASS);
+    big_box.classList.add(HIDDEN_CLASS);
+  }
+</script>
+</html>
