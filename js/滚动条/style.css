@@ -4,19 +4,21 @@
   background: #eee;
   border-radius: 5px;
   margin: 50px auto;
-  padding: 0 20px;
+  padding: 20px;
   overflow: hidden;
   position: relative;
+  box-shadow: 3px 3px 8px #ccc;
 }
 
 .content {
   width: 300px;
+  padding-bottom: 20px;
   position: relative;
 }
 
 .scroll {
   width: 10px;
-  height: 400px;
+  height: 440px;
   top: 0;
   right: 0;
   position: absolute;

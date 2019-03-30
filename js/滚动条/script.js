@@ -49,5 +49,8 @@ function addBarMoveEvent() {
     document.onmousemove = null;
   };
 }
-setBarHeight();
-addBarMoveEvent();
+
+(function () {
+  setBarHeight();
+  addBarMoveEvent();
+}());
