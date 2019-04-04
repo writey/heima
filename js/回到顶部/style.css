@@ -1,0 +1,30 @@
+body {
+  /* transition: all 0.4s; */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.8s;
+}
+
+.head-min {
+  height: 100px;
+  background: rgba(200, 200, 200, 0.3);
+}
+
+.cd-top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 50px;
+  right: 50px;
+  bottom: 50px;
+}
