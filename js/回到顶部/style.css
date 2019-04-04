@@ -10,9 +10,13 @@ header {
   border: 1px solid #ccc;
   background: rgba(0, 0, 0, 0.3);
   transition: all 0.8s;
+  text-align: center;
+  line-height: 200px;
 }
 
 .head-min {
+  text-align: center;
+  line-height: 100px;
   height: 100px;
   background: rgba(200, 200, 200, 0.3);
 }
