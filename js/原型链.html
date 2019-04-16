@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+  function Student(name, age, sex) {
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+  }
+
+  Student.prototype.sayHi = function () {
+    console.log(this.name);
+  }
+  const s1 = new Student('zs', 18, '男');
+  const s2 = new Student('ls', 18, '男');
+  s1.sayHi();
+  s2.sayHi();
+  // 对象的__prpo__属性 等于类的prototype
+  // 类的构造函数等于 prototype的 constructor
+  // 对象调用方法时先从构造函数中查找该方法，找不到时回到对象原型中查找，再找不到会到object中查找
+</script>
+</body>
+</html>

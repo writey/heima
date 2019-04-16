@@ -9,11 +9,8 @@ cdTop.onclick = () => {
 };
 
 b.onscroll = () => {
-	// if(b.scrollTop === 30) {
-		// console.log(document.querySelector('html').scrollTop);
-	// }
-  if (h.scrollTop >= 100){
-    console.log(h.scrollTop);
+  if (h.scrollTop >= 100) {
+    // console.log(h.scrollTop);
     header.classList.add('head-min');
   } else {
     header.classList.remove('head-min');
