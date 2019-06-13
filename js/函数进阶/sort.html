@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+  Array.prototype.mysort = function (fn) {
+    for (var i = 0; i < this.length - 1; i++) {
+      var isSort = true;
+      for (var j = 0; j < this.length - i - 1; j++) {
+        isSort = false;
+        if (fn(this[j], this[j + 1]) > 0) {
+          var temp = this[j];
+          this[j] = this[j + 1];
+          this[j + 1] = temp;
+        }
+      }
+      if (isSort) {
+        break;
+      }
+    }
+  }
+
+  var arr = [1, 4, 8, 3, 13];
+  arr.mysort(function (a, b) {
+    return b - a;
+  });
+  console.log.apply(console, arr);
+</script>
+</html>

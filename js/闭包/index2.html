@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="peoples">
+    <li>君奉天</li>
+    <li>侠菩提</li>
+    <li>却尘思</li>
+    <li>解锋镝</li>
+  </ul>
+</body>
+<script type="text/javascript">
+  const list = document.querySelectorAll('#peoples > li');
+  for (var i = 0; i < list.length; i++) {
+    // list[i].index = i;
+    // list[i].onclick = function () {
+    //   console.log(this.index);
+    // }
+    (function (i) {
+      list[i].onclick = function () {
+        console.log(i);
+      }
+    })(i);
+  }
+</script>
+</html>

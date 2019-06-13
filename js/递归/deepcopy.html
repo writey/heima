@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+  function deepCopy(o1, o2) {
+    for (var key in o1) {
+      if (o1[key] instanceof Object) {
+        o2[key] = {};
+        deepCopy(o1[key], o2[key]);
+      } else {
+        o2[key] = o1[key];
+      }
+    }
+  }
+
+  var o1 = {
+    name: 'zs',
+    age: 18,
+    dog: {
+      name: 'ssss',
+      type: 'jm'
+    },
+    firends: ['ls', 'ww']
+  };
+  var o2 = {};
+  deepCopy(o1, o2);
+  o1.dog.name = 'aaaa';
+  o1.firends[0] = 'zs';
+  console.dir(o2);
+</script>
+</html>

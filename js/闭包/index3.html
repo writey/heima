@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>字体</p>
+  <button size="12">按钮1</button>
+  <button size="14">按钮2</button>
+  <button size="16">按钮3</button>
+</body>
+<script type="text/javascript">
+  function chanSize(size) {
+    return function () {
+      document.body.style.fontSize = size + 'px';
+    }
+  }
+
+  var list = document.querySelectorAll('button');
+  for (var i = 0; i < list.length; i++) {
+    (function(i) {
+      var size = list[i].getAttribute('size');
+      list[i].onclick = chanSize(size);
+    })(i);
+  }
+</script>
+</html>
